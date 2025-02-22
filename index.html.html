@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAFARA RUGARA - Resume</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            color: #333;
+            background: linear-gradient(to right, #87CEEB, #e0ffff);
+            margin: 0;
+            padding: 0;
+            font-size: 18px; /* Increased font size for readability */
+        }
+        header {
+            background: #4682B4;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Cambria', serif;
+            font-size: 24px; /* Increased header font size */
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #000;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Garamond', serif;
+            font-size: 18px; /* Increased section font size */
+        }
+        h1, h2 {
+            color: #4682B4;
+            font-family: 'Cambria', serif;
+            font-size: 28px; /* Increased header font size */
+        }
+        .typewriter {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 24px; /* Increased typewriter text font size */
+            animation: typing 7.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .skill-item {
+            background: #4682B4;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Cambria', serif;
+        }
+        .divider {
+            height: 2px;
+            background: #87CEEB;
+            margin: 20px 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const texts = [
+                "Welcome to Tafara Rugara's resume website.",
+                "Tafara is AWS Certified.",
+                "Tafara is an IT Cloud Support Engineer."
+            ];
+            let index = 0;
+            const typewriterElement = document.getElementById('typewriter');
+            function typeNextText() {
+                typewriterElement.innerHTML = '';
+                typewriterElement.classList.remove('typewriter');
+                void typewriterElement.offsetWidth; // Trigger reflow
+                typewriterElement.classList.add('typewriter');
+                typewriterElement.textContent = texts[index];
+                index = (index + 1) % texts.length;
+                setTimeout(typeNextText, 8500); // Change text every 2.5 seconds
+            }
+            typeNextText();
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>TAFARA RUGARA</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Tafara</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Home</h2>
+    <p id="typewriter" class="typewriter">Welcome to Tafara's resume website.</p>
+</section>
+
+<section id="about">
+    <h2>About Tafara</h2>
+    <p>I am a self-taught aspiring Cloud Engineer with a deep passion for cloud technologies and continuous learning. My goal is to grow within this field and leverage my skills to contribute to innovative projects and solutions. I am driven, ambitious, and committed to enhancing my knowledge and expertise in cloud computing.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill-item">Cloud Computing (AWS)</div>
+        <div class="skill-item">Virtualization</div>
+        <div class="skill-item">Linux OS and Server Management</div>
+        <div class="skill-item">Bash Scripting</div>
+        <div class="skill-item">Networking</div>
+        <div class="skill-item">Prompt Engineering</div>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <p>AWS Certified Cloud Practitioner</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <h3>1. Virtualization Project</h3>
+    <p><strong>Description:</strong> Created Virtual Machines (VMs) on a Windows PC using Vagrant and VirtualBox.</p>
+    <p><strong>Tools Used:</strong> Vagrant, VirtualBox</p>
+    <p><strong>Details:</strong></p>
+    <ul>
+        <li>Explained and documented the roles of Vagrant and VirtualBox in automating VM creation.</li>
+        <li>Configured the VM by editing a Vagrant file, a ruby script which contains the VM configuration that includes setting up static IPv4 address, bridged IP, RAM allocation, and CPU cores for our virtual machine.</li>
+        <li>Launched the virtual machine after configuring it and accessed the VM using Vagrant commands and SSH.</li>
+        <li>Installed and configured HTTPD service and hosted a static website using the VM as the server and further replaced the default page with a custom HTML page generated by Copilot and saved the index file in the right directory and refreshed the default page.</li>
+        <li>Created a three-part video series on YouTube explaining the project, its key components, and the skills demonstrated. YouTube channel is (Tech with Tafara) where I showcase publicly what I'm learning, have learned or built.</li>
+    </ul>
+    <p><strong>Skills Demonstrated:</strong> VM automation, scripting, server management, networking, documentation, and presentation.</p>
+
+    <div class="divider"></div>
+
+    <h3>2. AWS Cloud Resume Challenge</h3>
+    <p><strong>Description:</strong> Completed the AWS Cloud Resume Challenge.</p>
+    <p><strong>Skills Demonstrated:</strong> Cloud architecture, web hosting, serverless computing, security.</p>
+    <p>The AWS Cloud Resume Challenge is a hands-on project where you build a resume website using AWS services. It covers front-end development, serverless backend, cloud infrastructure management, and security.</p>
+    <ul>
+        <li>Designed and implemented a resume website hosted on AWS.</li>
+        <li>Utilized services like S3, Lambda, DynamoDB, and API Gateway.</li>
+        <li>Configured IAM roles and security best practices.</li>
+        <li>Documented each step of the project and shared my experience on GitHub.</li>
+    </ul>
+
+    <p>I am currently studying for the AWS Solutions Architect Associate and AWS Developer certifications. I aim to acquire both certifications by the first quarter of 2025. I am actively studying and building projects to enhance my skills and knowledge in cloud computing.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p><strong>Email:</strong> <a href="mailto:tfrsuperfx@gmail.com">tfrsuperfx@gmail.com</a></p>
+    <p><strong>Phone:</strong> +263 777 553 271</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tafara-rugara-0627b819b">linkedin.com/in/tafara-rugara-0627b819b</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/98Devops">github.com/98Devops</a></p>
+    <p><strong>YouTube:</strong> <a href="https://www.youtube.com/@techwithtaf/playlists">Tech with Tafara</a></p>
+</section>
+
+</body>
+</html>
